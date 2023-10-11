@@ -7,3 +7,11 @@ Install required dependancies ==> mvn dependency:copy-dependencies
 page layer ==> under main src java, because they are not realted to test cases
 scenarios should be written in feature file
 test cases should be written in step definition
+
+Cucumber uses junit to run parallel execuition of feature files rather than senarios each feature file will run on a single thread.
+
+run mvn tests
+mvn clean test
+
+run mvn with tags
+mvn test -Dcucumber.filter.tags="@smoke and @fast"
