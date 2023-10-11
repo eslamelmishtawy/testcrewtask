@@ -8,7 +8,7 @@ Feature: Subscription package feature
     Given User is on Subscription package page
     When Country is "KSA"
     And Language is "العربية"
-    Then Lite Plan Should be Displayed And Price is "155 SAR/month"
+    Then Lite Plan Should be Displayed And Price is "15 SAR/month"
     And Classic Plan Should be Displayed And Price is "25 SAR/month"
     And Premium Plan Should be Displayed And Price is "60 SAR/month"
 

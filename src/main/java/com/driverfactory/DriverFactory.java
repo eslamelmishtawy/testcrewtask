@@ -29,7 +29,7 @@ public class DriverFactory {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--headless");
             options.setBrowserVersion("118");
-            tlDriver.set(new FirefoxDriver());
+            tlDriver.set(new FirefoxDriver(options));
         } else {
             System.out.println("Please Enter Valid Browser");
         }
