@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 
 public class DriverFactory {
@@ -25,7 +26,9 @@ public class DriverFactory {
             tlDriver.set(new ChromeDriver(options));
 
         } else if (browser.equals("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
+            FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
+            options.setBrowserVersion("118");
             tlDriver.set(new FirefoxDriver());
         } else {
             System.out.println("Please Enter Valid Browser");
