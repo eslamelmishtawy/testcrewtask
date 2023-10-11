@@ -1,4 +1,4 @@
-package com.untils;
+package com.utils;
 
 public class Utils {
 }
