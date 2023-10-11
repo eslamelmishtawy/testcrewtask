@@ -2,9 +2,14 @@ package com.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 public class SubscriptionPage {
     private final WebDriver driver;
+
     private final By countryButton = By.id("country-btn");
     private final By litePlanText = By.id("name-lite");
     private final By classicPlanText = By.id("name-classic");
@@ -38,7 +43,11 @@ public class SubscriptionPage {
         return (premiumPlanTextStatus && premiumPlanCurrencyStatus);
     }
     public void clickOnCountryButton(){
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(countryButton));
         driver.findElement(countryButton).click();
+
     }
     public String getCountryDisplayed(){
         return (driver.findElement(countryButton).getText());

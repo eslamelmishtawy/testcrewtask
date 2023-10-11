@@ -16,6 +16,9 @@ public class DriverFactory {
         if(browser.equals("chrome")){
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--disable-dev-shm-usage");
             WebDriverManager.chromedriver().setup();
             tlDriver.set(new ChromeDriver(options));
 
