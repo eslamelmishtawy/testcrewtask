@@ -19,7 +19,9 @@ public class DriverFactory {
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-gpu");
             options.addArguments("--disable-dev-shm-usage");
-            WebDriverManager.chromedriver().setup();
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--start-maximized");
+            options.setBrowserVersion("118");
             tlDriver.set(new ChromeDriver(options));
 
         } else if (browser.equals("firefox")) {

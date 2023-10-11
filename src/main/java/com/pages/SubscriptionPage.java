@@ -2,6 +2,7 @@ package com.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,9 +45,9 @@ public class SubscriptionPage {
     }
     public void clickOnCountryButton(){
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(countryButton));
-        driver.findElement(countryButton).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+        WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(countryButton));
+        e.click();
 
     }
     public String getCountryDisplayed(){
