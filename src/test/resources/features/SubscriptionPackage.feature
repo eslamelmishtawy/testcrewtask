@@ -4,6 +4,7 @@ Feature: Subscription package feature
     When Subscriptions package page is displayed
     Then Page title should be "stc tv | Watch Movies, Series & Live TV - Enjoy Free Trial"
 
+    @Smoke
   Scenario: Subscription Package Country KSA and Language Is English
     Given User is on Subscription package page
     When Country is "KSA"
