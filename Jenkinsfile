@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Install Dependancies') {
             steps {
-                git branch: 'develop', credentialsId: '5a0c987e-7851-4f50-9703-5acb655ba34b', url: 'https://github.com/eslamelmishtawy/testcrewtask.git'
                 sh "mvn compile"
 
             }
