@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import com.utils.*;
 
 
 public class SubscriptionPage {
@@ -29,41 +30,42 @@ public class SubscriptionPage {
         return driver.getTitle();
     }
     public Boolean litePlanDetailsIsDisplayed(){
-        Boolean litePlanTextStatus = driver.findElement(litePlanText).isDisplayed();
-        Boolean litePlanCurrencyStatus = driver.findElement(liteCurrency).isDisplayed();
+        Boolean litePlanTextStatus = Utils.elementIsDisplayed(driver, Constants.waitTime, litePlanText);
+        Boolean litePlanCurrencyStatus = Utils.elementIsDisplayed(driver, Constants.waitTime, liteCurrency);
         return (litePlanTextStatus && litePlanCurrencyStatus);
     }
     public Boolean classicPlanDetailsIsDisplayed(){
-        Boolean classicPlanTextStatus = driver.findElement(classicPlanText).isDisplayed();
-        Boolean classicPlanCurrencyStatus = driver.findElement(classicCurrency).isDisplayed();
+        Boolean classicPlanTextStatus = Utils.elementIsDisplayed(driver, Constants.waitTime, classicPlanText);
+        Boolean classicPlanCurrencyStatus = Utils.elementIsDisplayed(driver, Constants.waitTime, classicCurrency);
         return (classicPlanTextStatus && classicPlanCurrencyStatus);
     }
     public Boolean premiumPlanDetailsIsDisplayed(){
-        Boolean premiumPlanTextStatus = driver.findElement(premiumPlanText).isDisplayed();
-        Boolean premiumPlanCurrencyStatus = driver.findElement(premiumCurrency).isDisplayed();
+        Boolean premiumPlanTextStatus = Utils.elementIsDisplayed(driver, Constants.waitTime, premiumPlanText);
+        Boolean premiumPlanCurrencyStatus = Utils.elementIsDisplayed(driver, Constants.waitTime, premiumCurrency);
         return (premiumPlanTextStatus && premiumPlanCurrencyStatus);
     }
     public void clickOnCountryButton(){
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
-        WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(countryButton));
-        e.click();
+        Utils.clickOnElement(driver, Constants.waitTime, countryButton);
 
     }
     public String getCountryDisplayed(){
-        return (driver.findElement(countryButton).getText());
+        return (Utils.getText(driver,Constants.waitTime, countryButton));
     }
     public String getLanguageDisplayed(){
-        return (driver.findElement(languageButton).getText());
+        return (Utils.getText(driver,Constants.waitTime, languageButton));
     }
     public String getLitePlanPrice(){
-        return (driver.findElement(liteCurrency).getText());
+        return (Utils.getText(driver,Constants.waitTime, liteCurrency));
     }
     public String getClassicPlanPrice(){
-        return (driver.findElement(classicCurrency).getText());
+        return (Utils.getText(driver,Constants.waitTime, classicCurrency));
     }
     public String getPremiumPlanPrice(){
-        return (driver.findElement(premiumCurrency).getText());
+        return (Utils.getText(driver,Constants.waitTime, premiumCurrency));
+    }
+
+    public void selectArabicLanguage(){
+        Utils.clickOnElement(driver, Constants.waitTime, languageButton);
     }
 
 }

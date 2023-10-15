@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Install Dependancies') {
+        stage('Install Dependencies') {
             steps {
                 sh "mvn compile"
 

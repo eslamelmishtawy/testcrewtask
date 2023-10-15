@@ -1,0 +1,44 @@
+{
+  "KSA": {
+    "En": {
+      "name": "KSA",
+      "LitePrice": "15 SAR/month",
+      "ClassicPrice": "25 SAR/month",
+      "PremiumPrice": "60 SAR/month"
+    },
+    "Ar": {
+      "name": "السعودية",
+      "LitePrice": "15 ريال سعودي/شهر",
+      "ClassicPrice": "25 ريال سعودي/شهر",
+      "PremiumPrice": "60 ريال سعودي/شهر"
+    }
+  },
+  "Kuwait": {
+    "En": {
+      "name": "Kuwait",
+      "LitePrice": "1.2 KWD/month",
+      "ClassicPrice": "2.5 KWD/month",
+      "PremiumPrice": "4.8 KWD/month"
+    },
+    "Ar": {
+      "name": "الكويت",
+      "LitePrice": "1.2 دينار كويتي/شهر",
+      "ClassicPrice": "2.5 دينار كويتي/شهر",
+      "PremiumPrice": "4.8 دينار كويتي/شهر"
+    }
+  },
+  "Bahrain": {
+    "En": {
+      "name": "Bahrain",
+      "LitePrice": "2 BHD/month",
+      "ClassicPrice": "3 BHD/month",
+      "PremiumPrice": "6 BHD/month"
+    },
+    "Ar": {
+      "name": "البحرين",
+      "LitePrice": "2 \u202Bدينار بحريني/شهر",
+      "ClassicPrice": "3 \u202Bدينار بحريني/شهر",
+      "PremiumPrice": "6 \u202Bدينار بحريني/شهر"
+    }
+  }
+}
